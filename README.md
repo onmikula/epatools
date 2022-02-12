@@ -7,14 +7,22 @@ The functions perform five tasks:
 1. read_jplace imports the output file in .jplace format (Matsen et al. 2012)
 2. root_jplace roots the tree (and modifies branch labels accordingly), which requires specifying outgroup sequences
 3. classify_jplace classifies branches as belonging to clades, which are defined in a suitable data frame
-4. plot.jplace shows the reference tree, where the most probable placements of query sequences are highlighted
+4. plot.jplace shows the reference tree and highlights the most probable placements of query sequences
 5. classify_sequences calculates probabilities of query sequences belonging to pre-specified clades
 
 The functions depend on R package ape (Paradis & Schliep 2019). 'plot.jplace' can save the plot as a .pdf file, the output of 'classify_sequences' can be saved as a tab-delimited file.
 
-The example pipeline ('epa_pipeline_example.R') includes not only the post-processing itself (= five aforementioned steps), but also inference of ML tree in RAxML (Stamatakis 2014) and running EPA, so it is possible to start with just two basic inputs, namely the sequence file and the classification file. The sequence file is an alignment of both reference and query sequences in .fasta or interleaved .phylip format. The classification file is a tab-delimited file which classifies sequences (=tree tips) to the clades of interest. If the whole pipeline is run, the sequences listed here are considered reference sequences. The pipeline is modular, however, so you can step in it at any point or skip parts that are not relevant for your purpose. For instance, you can supply your own pre-prepared set of reference sequences or pre-estimated phylogenetic tree or, most significantly, .jplace file from externally run EPA (or pplacer) analysis. In such case, you have to supply your own 'refseqfile', 'treefile' or 'jplacefile' names to the script. For other options, see comments in 'epa_pipeline_example.R' and 'func/epatools.R'. In order to run the whole pipeline, you have to put RAxML binary file into the bin folder.
+Two example pipelines are provided.
 
-The provided data are cytochrome b sequences of silvery mole-rats (Heliophobius) presented by Uhrová et al. (2022). Here, they are classified into just three clades: northern (N), southeastern (SE) & southwestern (SW). 
+The **epa_pipeline_fivesteps.R** demonstrates just the five aforementioned steps, starting with pre-estimated .jplace file. 
+
+The **epa_pipeline_complete.R** takes a sequence file and their classification into lineages as its inputs and includes also selection of the reference sequences, inference of the reference tree and EPA in RAxML (Stamatakis 2014). The pipeline is modular, however, so you can skip parts that are not relevant for your purpose. Namely, you can supply your own:
+- pre-prepared set of reference sequences
+- pre-estimated reference tree
+- .jplace file from externally run EPA or pplacer analysis (as in 'epa_pipeline_fivesteps.R'). 
+Note also that the focus here is on classification of query sequences to taxa, but the very purpose of EPA / pplacer is the phylogenetic placement of query sequences to the tree. If just this placement is of interest, the file defining the taxa is not necessary as classify_jplace and classify_sequences steps are not performed. In such case, however, reference sequences or reference tree have to be supplied. 
+
+The provided data are cytochrome b sequences of silvery mole-rats (Heliophobius) presented by Uhrová et al. (2022). Here, they are classified into three clades: northern (N), southeastern (SE) & southwestern (SW). 
 
 **References:**
 - Berger SA, Krompass D, Stamatakis A (2011) Performance, accuracy, and web server for evolutionary placement of short sequence reads under maximum likelihood. Systematic Biology, 60: 291–302. https://doi.org/10.1093/sysbio/syr010
