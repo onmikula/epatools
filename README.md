@@ -5,7 +5,7 @@ R functions post-processing outputs of phylogenetic placement analysis
 
 The functions perform five tasks:
 1. read_jplace imports the output file in .jplace format (Matsen et al. 2012)
-2. root_jplace roots the tree (and modifies branch labels accordingly), which requires specifying outgroup sequences
+2. root_jplace roots the tree (and modifies branch labels accordingly), using specified outgroup sequences
 3. classify_jplace classifies branches as belonging to clades, which are defined in a suitable data frame
 4. plot.jplace shows the reference tree and highlights the most probable placements of query sequences
 5. classify_sequences calculates probabilities of query sequences belonging to pre-specified clades
