@@ -19,7 +19,7 @@ The **epa_pipeline_fivesteps.R** demonstrates just the five aforementioned steps
 The **epa_pipeline_complete.R** takes a sequence file and their classification into lineages as its inputs and includes also selection of the reference sequences, inference of the reference tree and EPA in RAxML (Stamatakis 2014). The pipeline is modular, however, so you can skip parts that are not relevant for your purpose. Namely, you can supply your own:
 - pre-prepared set of reference sequences
 - pre-estimated reference tree
-- .jplace file from externally run EPA or pplacer analysis (as in 'epa_pipeline_fivesteps.R'). 
+- .jplace file from externally run EPA or pplacer analysis (as in 'epa_pipeline_fivesteps.R')
 
 Note also that the focus here is on classification of query sequences to taxa, but the very purpose of EPA / pplacer is the phylogenetic placement of query sequences to the tree. If just this placement is of interest, the file defining the taxa is not necessary as classify_jplace and classify_sequences steps are not performed. In such case, however, reference sequences or reference tree have to be supplied. 
 
