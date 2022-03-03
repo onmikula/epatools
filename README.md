@@ -23,7 +23,7 @@ The **epa_pipeline_complete.R** takes a sequence file and their classification i
 
 Note also that the focus here is on classification of query sequences to taxa, but the very purpose of EPA / pplacer is the phylogenetic placement of query sequences to the tree. If just this placement is of interest, the file defining the taxa is not necessary as classify_jplace and classify_sequences steps are not performed. In such case, however, reference sequences or reference tree have to be supplied. 
 
-The provided data are cytochrome b sequences of silvery mole-rats (Heliophobius) presented by Uhrová et al. (2022). Here, they are classified into three clades: northern (N), southeastern (SE) & southwestern (SW). 
+The provided data are cytochrome b sequences of silvery mole-rats (*Heliophobius*) presented by Uhrová et al. (2022). Here, they are classified into three clades: northern (N), southeastern (SE) & southwestern (SW). 
 
 **References:**
 - Berger SA, Krompass D, Stamatakis A (2011) Performance, accuracy, and web server for evolutionary placement of short sequence reads under maximum likelihood. Systematic Biology, 60: 291–302. https://doi.org/10.1093/sysbio/syr010
