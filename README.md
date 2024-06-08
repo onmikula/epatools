@@ -18,7 +18,7 @@ The package can be installed using devtools:
 
 ```
 library(devtools)
-devtools::install_github("onmikula/branchcutting", dependencies = TRUE)
+devtools::install_github("onmikula/epatools", dependencies = TRUE)
 ```
 
 
