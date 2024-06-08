@@ -1,1 +1,0 @@
-thius is a folder to store results of the pipeline, most importantly the table with classification of query sequences
