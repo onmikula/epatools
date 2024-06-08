@@ -13,6 +13,7 @@ The functions perform five tasks:
 The functions depend on R package ape (Paradis & Schliep 2019). 'plot.jplace' can save the plot as a .pdf file, the output of 'classify_sequences' can be saved as a tab-delimited file.
 
 **Installation:**
+
 The package can be installed using devtools:
 
 ```
